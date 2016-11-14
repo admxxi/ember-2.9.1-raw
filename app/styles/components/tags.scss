@@ -1,0 +1,9 @@
+.label {
+  &.sport {
+    background-color: $brand-success;
+  }
+
+  &.competition {
+    background-color: $brand-info;
+  }
+}

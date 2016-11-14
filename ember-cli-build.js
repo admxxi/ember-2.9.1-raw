@@ -9,10 +9,10 @@ module.exports = function(defaults) {
       extension: 'scss'
     },
     minifyJS: {
-      enabled: false
+      enabled: true
     },
     minifyCSS: {
-      enabled: false
+      enabled: true
     }
   });
 

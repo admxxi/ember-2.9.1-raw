@@ -1,0 +1,35 @@
+{{#if model.isPending}}
+
+  {{loader-svg}}
+
+{{else}}
+
+  {{#each model.single.single-articles as |article index|}}
+    <ul class="single">
+      <li>
+
+        {{#lazy-image url=model.article.0.links.0.url alt=model.article.0.links.0.altText}}
+          {{loader-svg className="loader-svg"}}
+        {{/lazy-image}}
+        <div class="container">
+          {{article.headline}}
+          {{{article.body}}}
+          <br><br>
+          Author: {{article.byLine}}.
+          <br>
+          {{#each model.article.0.keywords as |keyword index|}}
+            {{#if (isequal keyword.type 41)}}
+              <span class="label sport">{{keyword.keyword}}</span>
+            {{/if}}
+            {{#if (isequal keyword.type 62)}}
+              <span class="label competition">{{keyword.keyword}}</span>
+            {{/if}}
+          {{/each}}
+          <br>
+        </div>
+      </li>
+    </ul>
+
+  {{/each}}
+
+{{/if}}

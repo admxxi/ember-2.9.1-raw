@@ -1,0 +1,35 @@
+{{#if model.isPending}}
+  {{loader-svg}}
+{{else}}
+  <span id="headLineSorter" class="sorter desc" param="desc" {{action "sortBy" "headline" "headLineSorter"}}>SortBy HeadLine <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></span>
+  <span id="publishedSorter" class="sorter desc" param="desc" {{action "sortBy" "idPublished" "publishedSorter"}}>SortBy Date <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></span>
+
+  <ul class="listing">
+    {{#each computedModel as |article index|}}
+      <li>
+        {{#link-to 'article.view' article.idPublished}}
+          {{#lazy-image url=article.links.0.url alt=article.links.0.altText}}
+            {{loader-svg className="loader-svg"}}
+          {{/lazy-image}}
+        {{/link-to}}
+        <div class="footer">
+          {{#link-to 'article.view' article.idPublished}}
+            {{article.headline}}
+            <br> {{diffNow article.publishedTime}}.
+          {{/link-to}}
+          <br>
+          {{#each article.keywords as |keyword index|}}
+            {{#if (isequal keyword.type 41)}}
+              <span class="label sport">{{keyword.keyword}}</span>
+            {{/if}}
+            {{#if (isequal keyword.type 62)}}
+              <span class="label competition">{{keyword.keyword}}</span>
+            {{/if}}
+          {{/each}}
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}
+
+{{back-to-top}}

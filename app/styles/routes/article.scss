@@ -1,0 +1,53 @@
+#article {
+  
+  .sorter {
+    display: inline-block;
+    font-size: 12px;
+    padding-left: 10px;
+
+    .glyphicon {
+      padding-left: 4px;
+    }
+  }
+
+  ul.single {
+    li {
+      img {
+        width: 100%;
+      }
+    }
+
+    .container {
+      margin-top: 10px;
+    }
+  }
+
+  ul.listing {
+    li {
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid white;
+      background-color: rgb(66,52,71);
+
+      .footer {
+        position: absolute;
+        background-color: rgba(66,52,71,0.9);
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        padding: 10px;
+      }
+
+      img {
+        width: 100%;
+        z-index: 0;
+      }
+
+      .lazy-image-placeholder {
+        width: 20px;
+        margin-top: -10px;
+      }
+    }
+  }
+}

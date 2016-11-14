@@ -21,5 +21,10 @@ Router = Ember.Router.extend
 
 Router.map ->
 
+  @route 'article', ->
+    @route 'index'
+    @route 'view', { path: '/view/:article_id/' }
+
+  @route 'fourofour', { path: '/404/'}
 
 `export default Router`

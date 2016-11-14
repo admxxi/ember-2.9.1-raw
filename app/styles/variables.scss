@@ -1,0 +1,13 @@
+/* MEDIA QUERY */
+$mobile-xs: "only screen and (max-width: 320px)";
+$mobile-sm: "only screen and (max-width: 719px)";
+$mobile-md: "screen and (min-width: 320px) and (max-width: 436px)";
+$mobile-lg: "screen and (min-width: 414px) and (max-width: 436px)";
+$mobile: "only screen and (max-width: 768px)";
+$greater-than-mobile: "only screen and (min-width: 769px)";
+$desktop: "only screen and (max-width: 992px)";
+$bg-desktop: "only screen and (min-width: 993px) and (max-width: 1199px)";
+$bigger-desktop: "only screen and (min-width: 992px)";
+$bg-lg-desktop: "only screen and (max-width: 1199px)";
+$lg-desktop: "only screen and (min-width: 1200px)";
+$tablet: "screen and (min-width: 768px) and (max-width: 1024px)";
