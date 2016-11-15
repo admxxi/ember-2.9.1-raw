@@ -2,7 +2,7 @@
 `import LazyImage from 'ember-lazy-image/components/lazy-image'`;
 
 ArticleIndexController = Ember.Controller.extend
-  sortProperties: ['headline:desc']
+  sortProperties: ['idPublished:desc']
   computedModel: Ember.computed.sort('model', 'sortProperties')
 
   actions:

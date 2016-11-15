@@ -1,8 +1,8 @@
 {{#if model.isPending}}
   {{loader-svg}}
 {{else}}
-  <span id="headLineSorter" class="sorter desc" param="desc" {{action "sortBy" "headline" "headLineSorter"}}>SortBy HeadLine <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></span>
-  <span id="publishedSorter" class="sorter desc" param="desc" {{action "sortBy" "idPublished" "publishedSorter"}}>SortBy Date <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></span>
+  <span id="headLineSorter" class="sorter asc" param="asc" {{action "sortBy" "headline" "headLineSorter"}}>SortBy HeadLine <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></span>
+  <span id="publishedSorter" class="sorter asc" param="asc" {{action "sortBy" "idPublished" "publishedSorter"}}>SortBy Date <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></span>
 
   <ul class="listing">
     {{#each computedModel as |article index|}}
@@ -13,9 +13,11 @@
           {{/lazy-image}}
         {{/link-to}}
         <div class="footer">
+          <span class='publishedTime'>{{diffNow article.publishedTime}}</span>
           {{#link-to 'article.view' article.idPublished}}
+
             {{article.headline}}
-            <br> {{diffNow article.publishedTime}}.
+
           {{/link-to}}
           <br>
           {{#each article.keywords as |keyword index|}}

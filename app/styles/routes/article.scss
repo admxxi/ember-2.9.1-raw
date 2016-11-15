@@ -1,10 +1,10 @@
 #article {
-  
+
   .sorter {
     display: inline-block;
     font-size: 12px;
-    padding-left: 10px;
-
+    padding: 10px;
+    cursor: pointer;
     .glyphicon {
       padding-left: 4px;
     }
@@ -23,20 +23,22 @@
   }
 
   ul.listing {
+    margin: 0;
     li {
       position: relative;
       width: 100%;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid rgb(52,128,144);
       background-color: rgb(66,52,71);
 
       .footer {
         position: absolute;
-        background-color: rgba(66,52,71,0.9);
+        background-color: rgba(31,68,76,0.8);
         bottom: 0;
         width: 100%;
         height: auto;
         z-index: 1;
         padding: 10px;
+
       }
 
       img {
@@ -47,6 +49,14 @@
       .lazy-image-placeholder {
         width: 20px;
         margin-top: -10px;
+      }
+      .publishedTime{
+        font-size: 10px;
+        display: block;
+        text-align: right;
+        line-height: 12px;
+
+
       }
     }
   }

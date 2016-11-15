@@ -1,4 +1,6 @@
 .label {
+  margin-top: 10px;
+  display: inline-block;
   &.sport {
     background-color: $brand-success;
   }

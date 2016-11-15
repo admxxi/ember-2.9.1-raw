@@ -7,12 +7,12 @@ diffNow = (timestamp) ->
   days = now.diff(end, 'days')
   hours = now.diff(end, 'hours')
   if days > 24
-    days + " Days ago."
+    days + " days ago"
   else if hours > 0
-    hours + " Hours ago."
+    hours + " hours ago"
   else
     minutes = now.diff(end, 'minutes')
-    minutes + " Minutes ago."
+    minutes + " minutes ago"
 
 DiffNowHelper = Ember.Helper.helper diffNow
 
