@@ -1,4 +1,7 @@
-html {
-  background-color: black;
-  color: white;
+@import 'normalize';
+
+/* Put your CSS here */
+.ember-application {
+    color: white;
+    background-color: black;
 }
